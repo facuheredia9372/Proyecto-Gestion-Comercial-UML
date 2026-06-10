@@ -7,7 +7,9 @@ class Producto {
     }
 
     mostrar() {
-        console.log(this);
+        console.log(
+            `ID: ${this.id} | Nombre: ${this.nombre} | Precio: $${this.precio} | Stock: ${this.stock}`
+        );
     }
 }
 

@@ -1,5 +1,7 @@
 const Producto = require("./src/producto");
 
+const productos = [];
+
 const producto1 = new Producto(
     1,
     "Teclado",
@@ -7,4 +9,10 @@ const producto1 = new Producto(
     10
 );
 
-producto1.mostrar();
+productos.push(producto1);
+
+console.log("=== PRODUCTOS REGISTRADOS ===");
+
+productos.forEach(producto => {
+    producto.mostrar();
+});
