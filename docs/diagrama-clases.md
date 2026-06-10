@@ -1,43 +1,37 @@
-```mermaid
-classDiagram
++-----------+              +-----------+
+| Cliente   |              | Venta     |
++-----------+              +-----------+
+| id        |1          *  | id        |
+| nombre    |------------->| fecha     |
+| telefono  |              | total     |
++-----------+              +-----------+
 
-class Producto{
-+id
-+nombre
-+precio
-+stock
-}
++-------------+            +-----------+
+| Proveedor   |            | Compra    |
++-------------+            +-----------+
+| id          |1        *  | id        |
+| nombre      |----------->| fecha     |
+| telefono    |            | total     |
++-------------+            +-----------+
 
-class Cliente{
-+id
-+nombre
-+telefono
-}
++------------+
+| Producto   |
++------------+
+| id         |
+| nombre     |
+| precio     |
+| stock      |
++------------+
 
-class Proveedor{
-+id
-+nombre
-+telefono
-}
+Producto * <--------> * Venta
+Producto * <--------> * Compra
 
-class Compra{
-+id
-+fecha
-+total
-}
++-----------+
+| Reporte   |
++-----------+
+| generar() |
++-----------+
 
-class Venta{
-+id
-+fecha
-+total
-}
-
-class Reporte{
-+generar()
-}
-
-Compra --> Proveedor
-Venta --> Cliente
-Venta --> Producto
-Compra --> Producto
-```
+Reporte ----> Producto
+Reporte ----> Compra
+Reporte ----> Venta
