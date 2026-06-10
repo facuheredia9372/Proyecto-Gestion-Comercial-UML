@@ -4,6 +4,12 @@ class Cliente {
         this.nombre = nombre;
         this.telefono = telefono;
     }
+
+    mostrar() {
+        console.log(
+            `ID: ${this.id} | Nombre: ${this.nombre} | Teléfono: ${this.telefono}`
+        );
+    }
 }
 
 module.exports = Cliente;
