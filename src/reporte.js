@@ -1,6 +1,7 @@
 class Reporte {
     generar() {
-        console.log("Generando reporte...");
+        console.log("=== REPORTE GENERAL ===");
+        console.log("Reporte generado correctamente.");
     }
 }
 
